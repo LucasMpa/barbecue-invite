@@ -124,28 +124,27 @@ export default function RsvpSection({ initialRsvps, initialGoing, initialNotGoin
             )}
           </div>
 
-          <div className="bg-surface-container-lowest rounded-3xl p-6 flex items-center justify-between border border-outline-variant/20">
+          <div className="rounded-3xl p-8 flex flex-col justify-between gap-4" style={{ background: "#ffb703" }}>
             {weatherData ? (
               <>
+                <span className="font-label text-xs font-bold tracking-widest uppercase" style={{ color: "#6b4b00" }}>
+                  Previsão · 4 de Abril
+                </span>
                 <div className="flex items-center gap-4">
-                  <span className="text-5xl">{weatherData.emoji}</span>
+                  <span className="text-6xl leading-none">{weatherData.emoji}</span>
                   <div>
-                    <p className="text-on-surface font-headline font-extrabold text-2xl">
+                    <p className="font-headline font-black text-5xl leading-none" style={{ color: "#271900" }}>
                       {weatherData.tempMax}°C
                     </p>
-                    <p className="text-on-surface-variant text-sm">{weatherData.label}</p>
+                    <p className="font-semibold mt-1 text-sm" style={{ color: "#5e4100" }}>
+                      {weatherData.label}
+                      {weatherData.precipitation > 0 && ` · ${weatherData.precipitation}mm`}
+                    </p>
                   </div>
-                </div>
-                <div className="text-right">
-                  <p className="text-on-surface-variant font-label text-xs font-bold uppercase">
-                    Previsão
-                  </p>
-                  <p className="text-on-surface font-bold text-sm">4 de Abril</p>
-                  <p className="text-on-surface-variant text-xs">Fortaleza, CE</p>
                 </div>
               </>
             ) : (
-              <div className="flex items-center gap-3 text-on-surface-variant">
+              <div className="flex items-center gap-3" style={{ color: "#6b4b00" }}>
                 <IoSunnyOutline size={28} />
                 <span className="text-sm">Previsão indisponível</span>
               </div>

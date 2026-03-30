@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import RsvpSection from "@/components/RsvpSection";
 import ItemsList from "@/components/ItemsList";
+import WhatToBring from "@/components/WhatToBring";
 import MapEmbed from "@/components/MapEmbed";
 import { getRsvps, getItems } from "@/lib/sheets";
 import { getWeather } from "@/lib/weather";
@@ -37,6 +38,8 @@ export default async function Home() {
 
       <div className="w-full h-px max-w-5xl mx-auto bg-outline-variant/30" />
 
+      <WhatToBring />
+
       <ItemsList initialItems={items} />
 
       <MapEmbed />
@@ -47,9 +50,6 @@ export default async function Home() {
           <MdMusicNote className="text-outline-variant text-4xl" />
           <MdLocalBar className="text-outline-variant text-4xl" />
         </div>
-        <p className="text-on-surface-variant font-label text-sm uppercase tracking-widest">
-          Fortaleza, CE
-        </p>
       </footer>
     </main>
   );

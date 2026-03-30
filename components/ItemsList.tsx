@@ -62,7 +62,6 @@ export default function ItemsList({ initialItems }: Props) {
             </p>
             <input
               type="text"
-              placeholder="Ex: Lorem ipsum"
               value={personName}
               onChange={(e) => setPersonName(e.target.value)}
               maxLength={60}

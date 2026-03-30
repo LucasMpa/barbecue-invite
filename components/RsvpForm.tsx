@@ -61,7 +61,6 @@ export default function RsvpForm({ onConfirm }: Props) {
         </p>
         <input
           type="text"
-          placeholder="Ex: Lorem Ipsum"
           value={name}
           onChange={(e) => setName(e.target.value)}
           maxLength={60}

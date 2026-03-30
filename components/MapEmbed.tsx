@@ -16,6 +16,21 @@ export default function MapEmbed() {
           <h2 className="text-4xl font-headline font-extrabold text-on-surface text-center">
             Localização
           </h2>
+           <div className="relative group">
+          <div className="absolute -inset-4 bg-primary-container/10 rounded-[2rem] -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
+          <div className="relative h-[380px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-surface-container-lowest">
+            <iframe
+              title="Localização do evento"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Avenida+Francisco+Sá+1854,Fortaleza,CE,Brasil&output=embed"
+            />
+          </div>
+        </div>
           <div className="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
               <MdPinDrop className="text-primary text-2xl" />
@@ -35,22 +50,6 @@ export default function MapEmbed() {
             <IoNavigateOutline size={20} />
             Abrir no GPS
           </a>
-        </div>
-
-        <div className="relative group">
-          <div className="absolute -inset-4 bg-primary-container/10 rounded-[2rem] -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
-          <div className="relative h-[380px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-surface-container-lowest">
-            <iframe
-              title="Localização do evento"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=Avenida+Francisco+Sá+1854,Fortaleza,CE,Brasil&output=embed"
-            />
-          </div>
         </div>
 
       </div>
