@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-headline: var(--font-plus-jakarta), sans-serif;
+  --font-body: var(--font-be-vietnam), sans-serif;
+  --font-label: var(--font-be-vietnam), sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #7d5800;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ffb703;
+  --color-on-primary-container: #6b4b00;
+  --color-primary-fixed: #ffdea9;
+  --color-primary-fixed-dim: #ffba27;
+  --color-on-primary-fixed: #271900;
+  --color-on-primary-fixed-variant: #5e4100;
+
+  --color-secondary: #934b00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fd8603;
+  --color-on-secondary-container: #5f2f00;
+  --color-secondary-fixed: #ffdcc4;
+  --color-secondary-fixed-dim: #ffb781;
+  --color-on-secondary-fixed: #301400;
+  --color-on-secondary-fixed-variant: #703800;
+
+  --color-tertiary: #bb152c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #ffafad;
+  --color-on-tertiary-container: #a50021;
+  --color-tertiary-fixed: #ffdad8;
+  --color-tertiary-fixed-dim: #ffb3b1;
+  --color-on-tertiary-fixed: #410007;
+  --color-on-tertiary-fixed-variant: #92001c;
+
+  --color-background: #fff9ec;
+  --color-on-background: #1e1c12;
+  --color-surface: #fff9ec;
+  --color-on-surface: #1e1c12;
+  --color-surface-variant: #e9e2d2;
+  --color-on-surface-variant: #514532;
+  --color-surface-bright: #fff9ec;
+  --color-surface-dim: #e0dac9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #faf3e2;
+  --color-surface-container: #f4eddd;
+  --color-surface-container-high: #eee8d7;
+  --color-surface-container-highest: #e9e2d2;
+  --color-inverse-surface: #333025;
+  --color-inverse-on-surface: #f7f0df;
+  --color-inverse-primary: #ffba27;
+
+  --color-outline: #837560;
+  --color-outline-variant: #d5c4ac;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff9ec;
+  color: #1e1c12;
+}
+
+.cta-gradient {
+  background: linear-gradient(135deg, #7d5800 0%, #ffb703 100%);
 }
