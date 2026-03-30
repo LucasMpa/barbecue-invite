@@ -16,7 +16,14 @@ const beVietnamPro = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   title: "Churrascada - 04 de Abril",
-  description: "Confirme sua presença no churrasco",
+  description: "Vai rolar um churrasco aqui, bem na resenha. A ideia é juntar a galera, cada um soma com o que puder e a gente faz acontecer. Confirma se vai e chega junto.",
+  openGraph: {
+    images: ["https://i.pinimg.com/736x/4e/82/67/4e8267ccfc04301b0002da787f64cbeb.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://i.pinimg.com/736x/4e/82/67/4e8267ccfc04301b0002da787f64cbeb.jpg"],
+  },
 };
 
 export default function RootLayout({
