@@ -10,6 +10,13 @@ export default function TestPage() {
           <h1 className="font-headline text-4xl font-black leading-tight text-on-surface sm:text-5xl">
             Página /test
           </h1>
+
+          <a
+            href="nequi://"
+            className="mt-6 inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 font-label text-sm font-bold text-on-primary shadow-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Abrir Nequi
+          </a>
         </div>
       </section>
     </main>
