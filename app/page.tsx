@@ -11,11 +11,23 @@ import { MdMusicNote, MdLocalBar } from "react-icons/md";
 export const revalidate = 60;
 
 export default async function Home() {
-  const [rsvps, items, weather] = await Promise.all([
+  const [rsvpsResult, itemsResult, weatherResult] = await Promise.allSettled([
     getRsvps(),
     getItems(),
     getWeather(),
   ]);
+
+  const rsvps = rsvpsResult.status === "fulfilled" ? rsvpsResult.value : [];
+  const items = itemsResult.status === "fulfilled" ? itemsResult.value : [];
+  const weather = weatherResult.status === "fulfilled" ? weatherResult.value : null;
+
+  if (rsvpsResult.status === "rejected") {
+    console.error(rsvpsResult.reason);
+  }
+
+  if (itemsResult.status === "rejected") {
+    console.error(itemsResult.reason);
+  }
 
   const going = rsvps.filter((r) => r.attending).length;
   const notGoing = rsvps.filter((r) => !r.attending).length;
